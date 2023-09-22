@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MyFirstApp</string>
+    <string name="edit_name">Digite un nombre...</string>
+    <string name="edit_lastname">Digite un apellido...</string>
+    <string name="label_genre">Género:</string>
+    <string name="label_birth">Nacimiento:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pick_date">Elige una fecha</string>
+    <string name="label_programming">Le gusta programar?</string>
+    <string name="radius_yes">Si</string>
+    <string name="radius_no">No</string>
+    <string name="label_lenguage">Lenguaje:</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="btn_limpiar">Limpiar</string>
+    <string name="java">Java</string>
+    <string name="js">JS</string>
+    <string name="c_c">C/C++</string>
+    <string name="python">Python</string>
+    <string name="golang">Golang</string>
+    <string name="c">C#</string>
+    <string-array name="genres_array">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+</resources>
