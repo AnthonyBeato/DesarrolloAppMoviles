@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal"
+                android:padding="8dp"
+>
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            app:cardElevation="6dp"
+    >
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <CheckBox
+                    android:text="CheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp" android:id="@+id/checkBox_title"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/imgBtn_delete"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" app:srcCompat="@drawable/baseline_delete_24"
+                    android:id="@+id/imgBtn_delete"
+                    android:backgroundTint="#FFFFFF"
+                    app:layout_constraintStart_toEndOf="@+id/checkBox_title" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                    app:tint="#B71C1C" app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
