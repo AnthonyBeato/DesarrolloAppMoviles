@@ -16,22 +16,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new RecyclerViewFragment());
 
-        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
-            int itemId = item.getItemId();
+        if (savedInstanceState == null) {
+            replaceFragment(new RecyclerViewFragment());
+        }
 
-            if(itemId == R.id.recyclerview){
-                //Cuando se clickea recyclerview:
-                replaceFragment(new RecyclerViewFragment());
+        if (binding != null){
+            binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+                int itemId = item.getItemId();
 
-            }else if(itemId == R.id.listview){
-                //Cuando se clickea listview:
-                replaceFragment(new ListViewFragment());
-            }
+                if(itemId == R.id.recyclerview){
+                    //Cuando se clickea recyclerview:
+                    replaceFragment(new RecyclerViewFragment());
 
-            return true;
-        });
+                }else if(itemId == R.id.listview){
+                    //Cuando se clickea listview:
+                    replaceFragment(new ListViewFragment());
+                }
+
+                return true;
+            });
+        }
     }
 
     private void replaceFragment(Fragment fragment){
