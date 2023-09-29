@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.todolist.databinding.ActivityMainBinding;
+import com.example.todolist.fragments.ListViewFragment;
+import com.example.todolist.fragments.RecyclerViewFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,10 +41,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void replaceFragment(Fragment fragment){
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.addToBackStack(null); // Se agrega a la pila de retroceso
         fragmentTransaction.commit();
     }
+
 }
