@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" android:paddingBottom="26dp">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/baseline_add_24"
+            android:id="@+id/floatingAddTaskButton"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp" android:contentDescription="@string/textAddTask"
+            android:paddingBottom="26dp"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/myTasksTitle" android:paddingBottom="0dp">
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="70dp" app:cardBackgroundColor="?android:attr/colorBackground"
+                android:paddingBottom="26dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:paddingBottom="0dp">
+
+                <TextView
+                        android:text="@string/mis_tareas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/welcomeTaskTitle"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginTop="32dp" android:layout_marginStart="16dp" android:textSize="28sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/myTasksTitle"
+            app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/recycler"
+            tools:listitem="@layout/recyclerview_item" app:layout_constraintTop_toBottomOf="@+id/myTasksTitle"
+            android:paddingBottom="26dp" android:visibility="gone"/>
+    <View
+            android:layout_width="0dp"
+            android:layout_height="106dp" android:id="@+id/view"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/gradient_bottom"
+            android:paddingBottom="26dp"/>
+    <TextView
+            android:text="@string/empy_list_text"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" android:id="@+id/emptyTextView"
+            app:layout_constraintTop_toBottomOf="@+id/myTasksTitle"
+            app:layout_constraintBottom_toTopOf="@+id/view" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:textAlignment="center" android:textSize="16sp"
+            android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
